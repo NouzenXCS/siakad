@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# SIAKAD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+School Academic Information System built with React, TypeScript, Express.js, and MySQL for managing students, teachers, attendance, schedules, grades, assignments, and academic administration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Student Management
+* Teacher Management
+* Class Management
+* Attendance Management
+* Grade Management
+* Schedule Management
+* Assignment and Submission Management
+* Announcements Management
+* Achievement Management
+* Multi-Role Access (Admin, Teacher, Student)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+* React
+* TypeScript
+* Vite
+* React Router
+* Bootstrap 5
+* Bootstrap Icons
+* Radix UI
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Backend
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Node.js
+* Express.js
+* mysql2
+* dotenv
+* nodemailer
+* cors
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Database
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* MariaDB
+* MySQL
+
+### Additional Libraries
+
+* xlsx
+* date-fns
+* recharts
+* sonner
+
+## Screenshots
+
+### Login Page
+
+![Login Page](screenshots/login-page.png)
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/dashboard-admin.png)
+
+### Teacher Dashboard
+
+![Teacher Dashboard](screenshots/dashboard-guru.png)
+
+### Student Dashboard
+
+![Student Dashboard](screenshots/dashboard-siswa.png)
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/NouzenXCS/siakad.git
+cd siakad
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### Configure Environment Variables
+
+Create a `.env` file and adjust the configuration as needed.
+
+Example:
+
+```env
+VITE_API_BASE_URL=http://localhost:3001/api
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+## Database
+
+Import the provided SQL file:
+
+```text
+siakad_smaga.sql
+```
+
+into MySQL or MariaDB using phpMyAdmin or another database management tool.
+
+## Deployment
+
+* Hosting: DomaiNesia Nimbus Go
+* Web Server: Apache / cPanel
+* Runtime: CloudLinux Passenger Node.js
+* Frontend: React + Vite
+* Backend: Express.js
+
+## Author
+
+Zaidan
